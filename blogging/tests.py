@@ -1,8 +1,12 @@
+import datetime
+
 from django.test import TestCase
 from django.contrib.auth.models import User
-from blogging.models import Post, Category
-import datetime
 from django.utils.timezone import utc
+
+from blogging.models import Post
+from blogging.models import Category
+
 
 class PostTestCase(TestCase):
     fixtures = ['blogging_test_fixture.json', ]
@@ -15,6 +19,7 @@ class PostTestCase(TestCase):
         p1 = Post(title=expected)
         actual = str(p1)
         self.assertEqual(expected, actual)
+
 
 class CategoryTestCase(TestCase):
 
