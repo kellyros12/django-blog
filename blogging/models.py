@@ -24,3 +24,12 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = "Categories"
+
+
+class Comment(models.Model):
+    title = models.CharField(max_length=128)
+    text = models.TextField(blank=True)
+    author = models.CharField(max_length=128, blank=True)
+
+    def __str__(self):
+        return self.title
