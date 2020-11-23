@@ -1,2 +1,0 @@
-release: python manage.pymigrate
-web: gunicorn mysite.wsgi
