@@ -13,16 +13,8 @@ class BlogListView(ListView):
 
 
 class BlogDetailView(DetailView):
-    model = Post
+    queryset = Post.objects.exclude(published_date__exact=None)
     template_name = "blogging/detail.html"
-
-    def post(self, request, *args, **kwargs):
-        published = Post.objects.exclude(published_date__exact=None)
-
-        post =  published.get(pk=post_id)
-
-        context = {"object": post}
-        return render(request, "blogging/detail.html", context)
 
 # def detail_view(request, post_id):
 #     published = Post.objects.exclude(published_date__exact=None)
