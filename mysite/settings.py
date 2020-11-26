@@ -41,13 +41,12 @@ INSTALLED_APPS = [
     "polling",
     "blogging",
     # The Django sites framework is required
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
     # Login via Github
-    'allauth.socialaccount.providers.github',
-
+    "allauth.socialaccount.providers.github",
 ]
 
 MIDDLEWARE = [
@@ -139,7 +138,7 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_VERIFICATION = "none"
 
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = "/"
